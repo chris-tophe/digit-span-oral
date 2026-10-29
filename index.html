@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digit Span Oral - Exercice de Mémoire</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2c3e50">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🧠 Digit Span Oral</h1>
+            <p class="subtitle">Exercice de mémorisation auditive</p>
+        </header>
+
+        <main>
+            <div class="settings">
+                <div class="setting-group">
+                    <label for="spanLength">Longueur de la série:</label>
+                    <input type="number" id="spanLength" min="3" max="12" value="5">
+                </div>
+                <div class="setting-group">
+                    <label for="allowDuplicates">Autoriser les doublons:</label>
+                    <input type="checkbox" id="allowDuplicates" checked>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button id="startBtn" class="btn primary">🎤 Commencer l'exercice</button>
+                <button id="stopBtn" class="btn secondary" disabled>⏹ Arrêter</button>
+            </div>
+
+            <div class="display">
+                <div id="numberDisplay" class="numbers hidden">
+                    <span id="currentNumber"></span>
+                </div>
+                <div id="status" class="status">Prêt à commencer</div>
+            </div>
+
+            <div class="response-section">
+                <h3>Votre réponse:</h3>
+                <div class="response-inputs">
+                    <div class="mode-selector">
+                        <label>
+                            <input type="radio" name="mode" value="forward" checked>
+                            <span>Ordre normal</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="mode" value="reverse">
+                            <span>Ordre inverse</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="mode" value="ascending">
+                            <span>Ordre croissant</span>
+                        </label>
+                    </div>
+                    <div id="inputContainer" class="input-container">
+                        <!-- Les inputs seront générés dynamiquement -->
+                    </div>
+                </div>
+                <button id="submitBtn" class="btn success" disabled>✓ Valider</button>
+            </div>
+
+            <div class="results">
+                <h3>Résultats:</h3>
+                <div id="resultsList"></div>
+                <div class="stats">
+                    <span>Bonnes réponses: <span id="correctCount">0</span></span>
+                    <span>|</span>
+                    <span>Taux de réussite: <span id="successRate">0%</span></span>
+                </div>
+            </div>
+        </main>
+
+        <div id="modal" class="modal hidden">
+            <div class="modal-content">
+                <h2 id="modalTitle">Écoutez attentivement...</h2>
+                <p id="modalMessage"></p>
+                <button id="modalClose" class="btn">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
