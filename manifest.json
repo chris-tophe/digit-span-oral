@@ -1,11 +1,11 @@
 {
     "name": "Digit Span",
     "short_name": "DigitSpan",
-    "description": "Exercice de mémorisation de chiffres - Style Apple",
+    "description": "Exercice de mémorisation de chiffres - Design Moderne",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#f5f5f7",
-    "theme_color": "#0071e3",
+    "background_color": "#0f0f23",
+    "theme_color": "#4361ee",
     "icons": [
         {
             "src": "icons/icon-72x72.png",
@@ -55,8 +55,5 @@
             "type": "image/png",
             "purpose": "any maskable"
         }
-    ],
-    "apple_mobile_web_app_capable": true,
-    "apple_mobile_web_app_status_bar_style": "black-translucent",
-    "apple_mobile_web_app_title": "Digit Span"
+    ]
 }
